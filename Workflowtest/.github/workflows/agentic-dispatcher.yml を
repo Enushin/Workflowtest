@@ -1,0 +1,21 @@
+name: Agentic Dispatcher
+on:
+  workflow_dispatch:
+    inputs:
+      agent:
+        type: choice
+        options: [issue, codegen, review, pr, coordinator]
+      issue_number:
+        type: string
+        required: true
+      branch:
+        type: string
+        default: main
+jobs:
+  call:
+    uses: Enushin/agentic-workflows/.github/workflows/agentic-system.yml@v1.0.0
+    with:
+      agent: ${{ inputs.agent }}
+      issue_number: ${{ inputs.issue_number }}
+      branch: ${{ inputs.branch }}
+    secrets: inherit
