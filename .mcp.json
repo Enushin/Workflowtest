@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "agentic-mcp": {
+      "command": "node",
+      "args": ["/Users/Work/MCP/agentic-mcp-server/mcp-wrapper.cjs"],
+      "env": {
+        "GITHUB_REPOSITORY": "Enushin/Workflowtest",
+        "GH_REPO": "Enushin/Workflowtest",
+        "ANTHROPIC_API_KEY": "\u0024{ANTHROPIC_API_KEY}",
+        "GITHUB_TOKEN": "\u0024{GITHUB_TOKEN}"
+      }
+    }
+  }
+}
